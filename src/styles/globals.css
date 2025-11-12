@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --radius-xl: 28px;
+}
+
+@theme inline {
+  --color-brand-blue: #0f1c3f;
+  --color-brand-gold: #c89d3a;
+  --color-brand-navy: #071125;
+  --color-brand-slate: #4e5c7b;
+  --color-brand-pearl: #f5f7fb;
+  --color-ocean: #113768;
+  --color-ink: #0b162f;
+  --color-muted: #53627f;
+  --color-border: #e0e6f0;
+  --shadow-card: 0 30px 70px rgba(15, 28, 63, 0.08);
+  --font-sans: var(
+    --font-geist-sans,
+    "Inter",
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif
+  );
+  --font-mono: var(
+    --font-geist-mono,
+    "JetBrains Mono",
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    "Courier New",
+    monospace
+  );
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--color-brand-pearl);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+::selection {
+  background-color: color-mix(in srgb, var(--color-brand-gold), white 10%);
+  color: #fff;
+}
+
+.section-shell {
+  width: min(1200px, 100%);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.glass-surface {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(18px);
+}
+
+.hero-gradient {
+  background-image: radial-gradient(
+      circle at top,
+      rgba(200, 157, 58, 0.25),
+      transparent 45%
+    ),
+    radial-gradient(circle at 20% 20%, rgba(15, 28, 63, 0.4), transparent 50%);
+}
+
+@keyframes float-up {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    opacity: 0.4;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(0.95);
+  }
+}
+
+.shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+.animate-fade-up {
+  animation: float-up 0.8s ease forwards;
+}
