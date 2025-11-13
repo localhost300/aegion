@@ -198,7 +198,7 @@ function ContactFormShell({
           </div>
           <div className="overflow-hidden rounded-3xl border border-brand-border">
             <Image
-              src="/contact-phone.jpg"
+              src="/brown-retro-electronic-phone-device.jpg"
               alt="Vintage telephone representing concierge support"
               width={900}
               height={1100}

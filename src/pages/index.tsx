@@ -2,6 +2,8 @@ import Head from "next/head";
 import type { NextPage } from "next";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import FoundationGrowth from "@/components/FoundationGrowth";
+import RetirementIRA from "@/components/RetirementIRA";
 import ValueProps from "@/components/ValueProps";
 import Approach from "@/components/Approach";
 import Offerings from "@/components/Offerings";
@@ -26,6 +28,8 @@ const Home: NextPage = () => {
         <Navbar />
         <main>
           <Hero />
+          <FoundationGrowth />
+          <RetirementIRA />
           <ValueProps />
           <Approach />
           <Offerings />

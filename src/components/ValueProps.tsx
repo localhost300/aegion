@@ -4,28 +4,28 @@ import { Shield, Landmark, Target, Sparkles } from "lucide-react";
 
 const props = [
   {
-    title: "IRA Stewardship",
+    title: "Liquid Yield Accounts",
     description:
-      "Purpose-built rollover playbooks, compliant onboarding, and proactive communication journeys for every participant segment.",
-    Icon: Shield,
-  },
-  {
-    title: "401(k) Modernization",
-    description:
-      "Plan diagnostics, fee benchmarking, and investment-menu architecture that keep sponsors confident and regulators satisfied.",
+      "Earn 4.00% APY on short-term savings with no account fees, balance minimums, or lockups—while keeping cash accessible whenever opportunity knocks.",
     Icon: Landmark,
   },
   {
-    title: "Holistic Wealth Design",
+    title: "Automated Growth Portfolios",
     description:
-      "Coordinated retirement, equity, and insurance strategies that give executives a unified lens on their long-term capital.",
-    Icon: Target,
+      "Our 4.50% APY foundation pairs low-risk bond ETFs with curated alternatives and automation that rebalances, harvests, and reinvests daily.",
+    Icon: Sparkles,
   },
   {
-    title: "Experience Leadership",
+    title: "Retirement Intelligence",
     description:
-      "Participant storytelling, education pulses, and digital tools that turn complex decisions into simple, human conversations.",
-    Icon: Sparkles,
+      "Unified visibility into every IRA, 401(k), and taxable account—complete with proactive nudges, strategy tracking, and regulatory confidence.",
+    Icon: Shield,
+  },
+  {
+    title: "Integrated FP&A",
+    description:
+      "Financial planning & analysis services that connect treasury, payroll, and personal finance so leaders can make fast, well-informed decisions.",
+    Icon: Target,
   },
 ];
 

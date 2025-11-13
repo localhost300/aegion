@@ -13,6 +13,43 @@ export type Service = {
 
 export const services: Service[] = [
   {
+    slug: "wealth-accumulation-strategies",
+    title: "Wealth Accumulation Strategies",
+    category: "Wealth",
+    summary:
+      "Integrated playbooks that balance high-yield cash, low-risk bond ETFs, and curated alternatives so capital compounds with confidence.",
+    heroImage: "/authentic-small-youthful-marketing-agency.jpg",
+    cardImage: "/life-style.jpg",
+    stats: [
+      { label: "Target APY", value: "4.50%" },
+      { label: "ETF lineup", value: "12 core funds" },
+      { label: "Automation cycles", value: "Weekly" },
+    ],
+    pillars: [
+      {
+        title: "Yield + Liquidity",
+        description:
+          "Blend insured cash programs with low-volatility ETFs to unlock dependable income without sacrificing access.",
+      },
+      {
+        title: "Alternative Windows",
+        description:
+          "Rotational sleeves across technology, renewable energy, cannabis, and more to capture emerging opportunities.",
+      },
+      {
+        title: "Hands-off Automation",
+        description:
+          "Our platform executes contributions, rebalancing, and tax-aware withdrawals so every dollar follows the plan.",
+      },
+    ],
+    highlights: [
+      "Holistic dashboard across banking, brokerage, and alternatives.",
+      "Scenario planning to stress-test capital over multiple horizons.",
+      "Education cadences tailored for executives and households.",
+    ],
+    ctaLabel: "Explore Wealth Strategies",
+  },
+  {
     slug: "ira-stewardship",
     title: "IRA Stewardship",
     category: "Retirement",
@@ -50,13 +87,50 @@ export const services: Service[] = [
     ctaLabel: "Discuss IRA Programs",
   },
   {
+    slug: "retirement-planning-solution",
+    title: "Retirement Planning Solution",
+    category: "Retirement",
+    summary:
+      "Automation, analytics, and advisory that help individuals and plan sponsors see every retirement asset—and act with clarity.",
+    heroImage: "/retirement-joy.jpg",
+    cardImage: "/lifestyle-people-office.jpg",
+    stats: [
+      { label: "Households supported", value: "12k+" },
+      { label: "Automation rules", value: "200+" },
+      { label: "Plan templates", value: "45" },
+    ],
+    pillars: [
+      {
+        title: "Holistic Dashboards",
+        description:
+          "Bring on- and off-platform assets into one view, tracking goals, tax lots, and withdrawal readiness.",
+      },
+      {
+        title: "Smart Contributions",
+        description:
+          "Automated, tax-aware funding schedules for traditional, Roth, SEP, and SIMPLE IRA structures.",
+      },
+      {
+        title: "Retirement Coaching",
+        description:
+          "Scenario planning and advisor check-ins that reinforce discipline until and through retirement.",
+      },
+    ],
+    highlights: [
+      "Pre-built education campaigns for employees or households.",
+      "Plan document generation plus secure archival.",
+      "Compliance-ready audit trails for every adjustment.",
+    ],
+    ctaLabel: "Plan My Retirement",
+  },
+  {
     slug: "401k-modernization",
     title: "401(k) Modernization",
     category: "Plan Design",
     summary:
       "Benchmarking, menu architecture, and automation that transform legacy 401(k) plans into resilient, high-performing benefits.",
-    heroImage: "/city-structure.jpg",
-    cardImage: "/strategy-discussion.jpg",
+    heroImage: "/strategy-discussion.jpg",
+    cardImage: "/team-session.jpg",
     stats: [
       { label: "Plans optimized", value: "175+" },
       { label: "Fee reductions", value: "22% avg" },
@@ -87,13 +161,50 @@ export const services: Service[] = [
     ctaLabel: "Modernize Our 401(k)",
   },
   {
+    slug: "financial-planning-analysis",
+    title: "Financial Planning & Analysis",
+    category: "Advisory",
+    summary:
+      "Data-rich analysis that connects enterprise finance with personal financial planning to keep leaders ahead of every decision.",
+    heroImage: "/macro-shot-financial-mortgage-concept.jpg",
+    cardImage: "/hero.jpg",
+    stats: [
+      { label: "Dashboards deployed", value: "90+" },
+      { label: "Reporting cadence", value: "Weekly" },
+      { label: "Model refresh time", value: "<4 hrs" },
+    ],
+    pillars: [
+      {
+        title: "Strategic Forecasting",
+        description:
+          "Rolling forecasts that align capital plans, benefits spend, and treasury objectives.",
+      },
+      {
+        title: "Personal FP&A",
+        description:
+          "Executive compensation, equity, and liquidity modeling to keep leaders on track personally and professionally.",
+      },
+      {
+        title: "Actionable Insights",
+        description:
+          "BI-powered alerts that translate raw data into decisions for finance, HR, and boards.",
+      },
+    ],
+    highlights: [
+      "Connected datasets across payroll, treasury, and investments.",
+      "Scenario toggles for inflation, hiring, and capital events.",
+      "Coaching for finance leaders adopting new tooling.",
+    ],
+    ctaLabel: "Schedule FP&A Review",
+  },
+  {
     slug: "strategic-insight",
     title: "Strategic Insight Office",
     category: "Advisory",
     summary:
       "A standing advisory bench that supplies capital-market research, policy recommendations, and decision-ready analytics.",
-    heroImage: "/strategy-discussion.jpg",
-    cardImage: "/team-session.jpg",
+    heroImage: "/hero.jpg",
+    cardImage: "/strategy-discussion.jpg",
     stats: [
       { label: "Briefings delivered", value: "320/yr" },
       { label: "Countries covered", value: "18" },
@@ -124,13 +235,13 @@ export const services: Service[] = [
     ctaLabel: "Request Insight Support",
   },
   {
-    slug: "risk-mitigation",
-    title: "Risk Awareness & Mitigation",
+    slug: "risk-assessment-mitigation",
+    title: "Risk Assessment & Mitigation",
     category: "Assurance",
     summary:
       "Operational resiliency, cybersecurity, and continuity programs that keep retirement operations audit-ready.",
-    heroImage: "/city-structure.jpg",
-    cardImage: "/wealth-planning.jpg",
+    heroImage: "/tall-skyscraper-with-metal-construction.jpg",
+    cardImage: "/city-structure.jpg",
     stats: [
       { label: "Incidents contained", value: "60+" },
       { label: "Average audit prep time", value: "-40%" },

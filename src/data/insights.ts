@@ -15,7 +15,7 @@ export const insights: Insight[] = [
     excerpt:
       "Voice-of-customer findings from thousands of participants as they roll balances and seek new advisory relationships.",
     tag: "Research",
-    image: "/family-finance.jpg",
+    image: "/insight-01.jpg",
     date: "March 12, 2025",
     readingTime: "6 min read",
   },
@@ -25,7 +25,7 @@ export const insights: Insight[] = [
     excerpt:
       "Playbooks for combining auto-features with storytelling that keeps employees confident through market swings.",
     tag: "Playbook",
-    image: "/strategy-discussion.jpg",
+    image: "/insight-02.jpg",
     date: "February 28, 2025",
     readingTime: "8 min read",
   },
@@ -35,7 +35,7 @@ export const insights: Insight[] = [
     excerpt:
       "How Aegion Mountain packages fiduciary reporting so directors can spot wins, risks, and next best moves at a glance.",
     tag: "Perspective",
-    image: "/team-session.jpg",
+    image: "/insight-03.jpg",
     date: "January 30, 2025",
     readingTime: "7 min read",
   },
