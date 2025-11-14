@@ -13,7 +13,7 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    slug: "wealth-accumulation-strategies",
+    slug: "wealath-accumulation-strategies",
     title: "Wealth Accumulation Strategies",
     category: "Wealth",
     summary:
