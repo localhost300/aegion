@@ -41,29 +41,26 @@ export default async function handler(
   try {
     if (recaptchaToken) {
       if (!process.env.RECAPTCHA_SECRET_KEY) {
-        return res.status(500).json({
-          success: false,
-          error: "Missing reCAPTCHA secret on the server.",
+        console.warn("reCAPTCHA token received but RECAPTCHA_SECRET_KEY is not set. Skipping verification.");
+      } else {
+        const verification = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: new URLSearchParams({
+            secret: process.env.RECAPTCHA_SECRET_KEY,
+            response: recaptchaToken,
+          }).toString(),
         });
-      }
 
-      const verification = await fetch("https://www.google.com/recaptcha/api/siteverify", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: new URLSearchParams({
-          secret: process.env.RECAPTCHA_SECRET_KEY,
-          response: recaptchaToken,
-        }).toString(),
-      });
-
-      const verificationResult = (await verification.json()) as { success: boolean };
-      if (!verificationResult.success) {
-        return res.status(400).json({
-          success: false,
-          error: "reCAPTCHA validation failed.",
-        });
+        const verificationResult = (await verification.json()) as { success: boolean };
+        if (!verificationResult.success) {
+          return res.status(400).json({
+            success: false,
+            error: "reCAPTCHA validation failed.",
+          });
+        }
       }
     }
 
@@ -97,9 +94,11 @@ ${message}
     return res.status(200).json({ success: true });
   } catch (error) {
     console.error("Contact form error", error);
+    const message =
+      error instanceof Error ? error.message : "Unable to send message. Please try again later.";
     return res.status(500).json({
       success: false,
-      error: "Unable to send message. Please try again later.",
+      error: message,
     });
   }
 }
