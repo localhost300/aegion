@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const stats = [
-  { label: "Short-term savings APY", value: "4.00%" },
-  { label: "Insurance coverage", value: "Up to $3M" },
-  { label: "Account fees", value: "$0" },
+  { label: "Plans modernized since 2020", value: "180+" },
+  { label: "Cash yield target", value: "4.00% APY" },
+  { label: "Partner-bank coverage", value: "Up to $3M" },
 ];
 
 export default function Hero() {
@@ -22,29 +22,28 @@ export default function Hero() {
           className="space-y-8"
         >
           <p className="inline-flex items-center rounded-full bg-brand-blue/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-brand-blue">
-            Aegion Mountain
+            Welcome to Aegion Mountain
           </p>
           <div className="space-y-6">
             <h1 className="text-4xl font-semibold leading-tight text-brand-blue md:text-5xl lg:text-6xl">
-              Easily increase your short-term savings returns and earn 4.00% APY.
+              Navigate the financial terrain with a guide that knows every ridge.
             </h1>
             <p className="text-lg text-brand-slate">
-              Unlock greater returns on idle cash through our partner banks. Accessing and
-              allocating capital stays effortless—no hidden conditions, no surprise hold periods,
-              just transparent earnings and liquidity.
+              Let us work with you to build a remarkable, new financial future. We keep every step
+              practical so leadership teams gain clarity and families gain undeniable momentum.
             </p>
             <ul className="space-y-2 text-sm font-semibold text-brand-blue">
               <li className="flex items-center gap-2">
                 <span className="h-2 w-2 rounded-full bg-brand-gold" />
-                No account fees ever.
+                Guided onboarding that translates your ambitions into a workable plan.
               </li>
               <li className="flex items-center gap-2">
                 <span className="h-2 w-2 rounded-full bg-brand-gold" />
-                No minimum or maximum balance to earn 4.00% APY.
+                Short-term cash strategies that still earn up to 4.00% APY.
               </li>
               <li className="flex items-center gap-2">
                 <span className="h-2 w-2 rounded-full bg-brand-gold" />
-                Benefit from up to $3M of partner-bank insurance.
+                Protection backed by partner-bank insurance of up to $3M.
               </li>
             </ul>
           </div>
@@ -56,22 +55,20 @@ export default function Hero() {
               rel="noreferrer"
               className="rounded-full bg-brand-blue px-8 py-3 text-white transition hover:-translate-y-0.5 hover:bg-brand-navy"
             >
-              Sign Up
+              Get Started
             </Link>
             <Link
               href="#approach"
               className="rounded-full border border-brand-blue px-8 py-3 font-semibold text-brand-blue transition hover:-translate-y-0.5 hover:bg-brand-blue hover:text-white"
             >
-              View Our Method
+              Learn More
             </Link>
           </div>
 
           <div className="grid gap-6 rounded-3xl border border-white/60 bg-white/80 p-6 shadow-card sm:grid-cols-3">
             {stats.map((stat) => (
               <div key={stat.label} className="space-y-1">
-                <p className="text-3xl font-semibold text-brand-blue">
-                  {stat.value}
-                </p>
+                <p className="text-3xl font-semibold text-brand-blue">{stat.value}</p>
                 <p className="text-sm text-brand-slate">{stat.label}</p>
               </div>
             ))}
@@ -95,14 +92,14 @@ export default function Hero() {
           <div className="absolute inset-0 bg-gradient-to-tr from-brand-blue/80 via-transparent to-transparent" />
           <div className="absolute bottom-6 left-6 rounded-3xl bg-white/85 p-5 backdrop-blur-md">
             <p className="text-xs font-semibold uppercase tracking-[0.4em] text-brand-gold">
-              Current Focus
+              Field Notes
             </p>
             <p className="mt-2 text-lg font-semibold text-brand-blue">
               Cash deployment windows under 24 hours
             </p>
             <p className="text-sm text-brand-slate">
-              Seamlessly direct liquidity into insured accounts and move it back into operations
-              without forfeiting the 4.00% yield.
+              Slide capital into insured accounts, bring it back into operations, and keep the plan
+              on track without forfeiting yield.
             </p>
           </div>
         </motion.div>

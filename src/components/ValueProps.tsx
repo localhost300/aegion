@@ -1,30 +1,24 @@
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
-import { Shield, Landmark, Target, Sparkles } from "lucide-react";
+import { Landmark, Sparkles, Target } from "lucide-react";
 
 const props = [
   {
-    title: "Liquid Yield Accounts",
+    title: "Financial Mastery",
     description:
-      "Earn 4.00% APY on short-term savings with no account fees, balance minimums, or lockups—while keeping cash accessible whenever opportunity knocks.",
+      "Create revenue streams intentionally and steadily. We harmonize short-term cash goals with long-term compounding so every decision feeds a healthier balance sheet.",
     Icon: Landmark,
   },
   {
-    title: "Automated Growth Portfolios",
+    title: "Strategic Transformation",
     description:
-      "Our 4.50% APY foundation pairs low-risk bond ETFs with curated alternatives and automation that rebalances, harvests, and reinvests daily.",
+      "Encourage constructive change that leads to a prosperous future. Our analysts translate complex market signals into action steps your team can actually run.",
     Icon: Sparkles,
   },
   {
-    title: "Retirement Intelligence",
+    title: "Collective Ingenuity",
     description:
-      "Unified visibility into every IRA, 401(k), and taxable account—complete with proactive nudges, strategy tracking, and regulatory confidence.",
-    Icon: Shield,
-  },
-  {
-    title: "Integrated FP&A",
-    description:
-      "Financial planning & analysis services that connect treasury, payroll, and personal finance so leaders can make fast, well-informed decisions.",
+      "Build creative solutions that unite operations, HR, and finance. Shared rituals and transparent reporting keep everyone marching toward the same summit.",
     Icon: Target,
   },
 ];
@@ -34,12 +28,12 @@ export default function ValueProps() {
     <section id="value" className="bg-white py-20">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
-          eyebrow="Why partners choose us"
-          title="Retirement strategy, delivered with precision."
-          description="Aegion Mountain combines actuarial depth with empathetic delivery - aligning fiduciary obligations with participant ambitions."
+          eyebrow="Reach higher"
+          title="Reach new heights in your life."
+          description="Aegion Mountain is a leading partner for modern financial programs, offering individualized playbooks for sustained prosperity and thoughtful wealth stewardship."
         />
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
           {props.map(({ title, description, Icon }) => (
             <motion.div
               key={title}
@@ -52,9 +46,7 @@ export default function ValueProps() {
               <div className="inline-flex rounded-2xl bg-brand-blue/10 p-3 text-brand-blue">
                 <Icon size={28} />
               </div>
-              <h3 className="mt-6 text-2xl font-semibold text-brand-blue">
-                {title}
-              </h3>
+              <h3 className="mt-6 text-2xl font-semibold text-brand-blue">{title}</h3>
               <p className="mt-3 text-base text-brand-slate">{description}</p>
             </motion.div>
           ))}

@@ -18,9 +18,9 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 shadow-sm backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 md:px-6 md:py-3">
-        <Link href="/" className="relative flex h-24 w-80 items-center">
+    <header className="sticky top-0 z-50 bg-white/90 py-1 shadow-sm backdrop-blur-md">
+      <div className="flex w-full items-center justify-between px-3 py-1 md:px-6 md:py-2">
+        <Link href="/" className="relative flex h-28 w-96 items-center lg:h-32 lg:w-[28rem]">
           <Image
             src="/aegion-logo.png"
             alt="Aegion Mountain"
@@ -30,7 +30,7 @@ export default function Navbar() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-5 text-xs font-medium text-brand-slate lg:flex">
+        <nav className="hidden items-center gap-5 text-base font-bold text-brand-slate lg:flex">
           {navItems.map((item) =>
             item.href.startsWith("#") ? (
               <a key={item.label} href={item.href} className="transition hover:text-brand-blue">
@@ -66,7 +66,7 @@ export default function Navbar() {
 
       {isOpen && (
         <div className="border-t border-brand-border bg-white px-6 py-4 lg:hidden">
-          <div className="flex flex-col gap-4 text-sm font-medium text-brand-blue">
+          <div className="flex flex-col gap-4 text-base font-semibold text-brand-blue">
             {navItems.map((item) =>
               item.href.startsWith("#") ? (
                 <a

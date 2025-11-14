@@ -2,13 +2,12 @@ import Head from "next/head";
 import type { NextPage } from "next";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import ValueProps from "@/components/ValueProps";
 import FoundationGrowth from "@/components/FoundationGrowth";
 import RetirementIRA from "@/components/RetirementIRA";
-import ValueProps from "@/components/ValueProps";
+import AboutCompany from "@/components/AboutCompany";
 import Approach from "@/components/Approach";
-import Offerings from "@/components/Offerings";
 import Testimonials from "@/components/Testimonials";
-import Insights from "@/components/Insights";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
@@ -28,13 +27,12 @@ const Home: NextPage = () => {
         <Navbar />
         <main>
           <Hero />
+          <ValueProps />
           <FoundationGrowth />
           <RetirementIRA />
-          <ValueProps />
+          <AboutCompany />
           <Approach />
-          <Offerings />
           <Testimonials />
-          <Insights />
           <ContactForm />
         </main>
         <Footer />

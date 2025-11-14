@@ -3,57 +3,56 @@ import SectionHeading from "@/components/SectionHeading";
 
 export default function FoundationGrowth() {
   return (
-    <section id="growth" className="bg-brand-pearl py-24">
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-[1.05fr_0.85fr]">
+    <section id="cash" className="bg-brand-pearl py-24">
+      <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-[1.05fr_0.9fr]">
         <div className="space-y-6">
           <SectionHeading
             align="left"
-            eyebrow="Wealth Accumulation"
-            title="Build a solid foundation for all of your financial assets to grow."
-            description="Earning 4.50% APY on cash shouldn’t require hoops. We combine low-risk bond ETF exposure, long-term automation, and curated alternatives so every dollar compounds with intention."
+            eyebrow="Short-term savings"
+            title="Easily increase your short-term savings returns while keeping cash within reach."
+            description="Earn an enticing 4.00% APY through our partner banks. Accessing and investing your cash stays effortless with no hidden conditions or obligations."
           />
           <p className="text-base text-brand-slate">
-            You care about investing, saving, and maximising profits; we supply the discipline
-            behind effortless wealth accumulation. Dividends from our carefully curated portfolio
-            of low-risk bond ETFs flow alongside a rotation of future-ready themes—so you capture
-            dependable income while positioning for tomorrow.
+            Unlock greater returns on idle cash while preserving complete liquidity. We choreograph
+            cash sweeps, provide transparent dashboards, and alert you before key funding windows
+            so you never sacrifice flexibility for yield.
           </p>
           <ul className="space-y-3 text-sm text-brand-blue">
             <li className="flex items-start gap-2">
               <span className="mt-1 h-2 w-2 rounded-full bg-brand-gold" />
-              Exceptional 4.50% annual percentage yield on capital without complicated lockups.
+              No account fees or surprise lockups.
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-1 h-2 w-2 rounded-full bg-brand-gold" />
-              Dividends sourced from diversified, low-volatility bond ETFs.
+              No minimum or maximum balance required to earn 4.00% APY.
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-1 h-2 w-2 rounded-full bg-brand-gold" />
-              Long-term investing strategies guided by our renowned automation.
+              Up to $3M of partner-bank insurance on deposits.
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-1 h-2 w-2 rounded-full bg-brand-gold" />
-              Explore a range of alternatives to optimise your allocation without adding busywork.
+              Daily liquidity so you can redeploy capital whenever opportunity knocks.
             </li>
           </ul>
+          <div className="rounded-3xl border border-brand-border bg-white/80 p-6 shadow-card">
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-brand-gold">
+              Extra assurance
+            </p>
+            <p className="mt-3 text-base text-brand-slate">
+              Statements consolidate every partner bank, making compliance reviews and treasury
+              reporting as simple as exporting a single file.
+            </p>
+          </div>
         </div>
-        <div className="grid gap-4 md:grid-cols-2">
-          <div className="relative h-72 overflow-hidden rounded-3xl">
-            <Image
-              src="/macro-shot-financial-mortgage-concept.jpg"
-              alt="Macro shot of financial planning documents"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="relative h-72 overflow-hidden rounded-3xl">
-            <Image
-              src="/authentic-small-youthful-marketing-agency.jpg"
-              alt="Team reviewing diversified wealth strategies"
-              fill
-              className="object-cover"
-            />
-          </div>
+        <div className="relative h-[26rem] overflow-hidden rounded-3xl shadow-card">
+          <Image
+            src="/macro-shot-financial-mortgage-concept.jpg"
+            alt="Short-term savings represented by a structure made of cash"
+            fill
+            className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 45vw"
+          />
         </div>
       </div>
     </section>
