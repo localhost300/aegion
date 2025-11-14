@@ -20,12 +20,15 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white/90 py-0.5 shadow-sm backdrop-blur-md">
       <div className="flex w-full items-center justify-between px-3 py-1 md:px-6 md:py-1.5">
-        <Link href="/" className="relative flex h-16 w-56 items-center lg:h-20 lg:w-80">
+        <Link
+          href="/"
+          className="relative flex h-16 w-64 items-center lg:h-20 lg:w-[22rem]"
+        >
           <Image
             src="/aegion-logo.png"
             alt="Aegion Mountain"
             fill
-            className="object-contain"
+            className="object-contain scale-110"
             priority
           />
         </Link>
