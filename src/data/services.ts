@@ -17,7 +17,7 @@ export const services: Service[] = [
     title: "Wealth Accumulation Strategies",
     category: "Wealth",
     summary:
-      "Personalized wealth programs that combine high-yield cash, disciplined core portfolios, and curated thematic sleeves so capital compounds with confidence.",
+      "Tailored plans that blend disciplined core portfolios, high-yield cash, and thematic sleeves so families can craft a legacy of long-term financial success.",
     heroImage: "/life-style.jpg",
     cardImage: "/authentic-small-youthful-marketing-agency.jpg",
     stats: [
@@ -27,9 +27,9 @@ export const services: Service[] = [
     ],
     pillars: [
       {
-        title: "Personalized Roadmaps",
+        title: "Tailored Plans",
         description:
-          "Every household receives a bespoke glidepath, education strategy, and liquidity plan anchored to their goals.",
+          "Aegion Mountain delivers all-encompassing, well-considered strategies so every client enjoys a personalized wealth-building roadmap.",
       },
       {
         title: "Opportunity Access",
@@ -46,6 +46,7 @@ export const services: Service[] = [
       "Holistic dashboards unite banking, brokerage, and alternative data.",
       "Automations rebalance, harvest losses, and stage withdrawals.",
       "Dedicated Aegion Mountain team for coaching and accountability.",
+      "Mission: deliver unrivaled expertise and smart financial advice while nurturing long-term client relationships.",
     ],
     ctaLabel: "Start Building Wealth",
   },
@@ -54,7 +55,7 @@ export const services: Service[] = [
     title: "Risk Assessment & Mitigation",
     category: "Assurance",
     summary:
-      "Comprehensive diagnostics, continuity playbooks, and market-monitoring so sponsors can absorb shocks and keep fiduciary files exam-ready.",
+      "Comprehensive market analysis, diagnostics, and continuity playbooks so sponsors can absorb shocks and keep fiduciary files exam-ready.",
     heroImage: "/city-structure.jpg",
     cardImage: "/tall-skyscraper-with-metal-construction.jpg",
     stats: [
@@ -63,6 +64,11 @@ export const services: Service[] = [
       { label: "Coverage zones", value: "Global" },
     ],
     pillars: [
+      {
+        title: "Market Analysis",
+        description:
+          "Rigorous assessments of market dynamics, trend shifts, and macro signals so leaders can make educated decisions and reduce financial risks.",
+      },
       {
         title: "Holistic Diagnostics",
         description:
@@ -83,6 +89,7 @@ export const services: Service[] = [
       "Regulatory horizon scans across DOL, IRS, SEC, and state mandates.",
       "Incident war-room support plus tabletop facilitation.",
       "Integration with Aegion Mountain governance calendars.",
+      "Mission/Vision: deliver unrivaled advice, build enduring relationships, and empower organizations for the long term.",
     ],
     ctaLabel: "Strengthen Risk Posture",
   },
@@ -102,9 +109,9 @@ export const services: Service[] = [
     ],
     pillars: [
       {
-        title: "Income Architecture",
+        title: "Lifetime Income",
         description:
-          "Segment assets into essential, lifestyle, and legacy needs with inflation-aware drawdown rules.",
+          "Customized strategies maximize earnings, protect retirement stability, and establish consistent income streams for every season of life.",
       },
       {
         title: "Specialized Investments",

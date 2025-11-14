@@ -7,19 +7,16 @@ const testimonials = [
     quote:
       "Aegion Mountain transformed how our board understands retirement readiness. Their detail and empathy show up in every interaction.",
     author: "Elena Park",
-    role: "Chief Strategy Officer · Aegion Mountain client",
   },
   {
     quote:
       "They deliver clarity in the room, alignment after the meeting, and measurable lift in plan outcomes within weeks.",
     author: "Marcus Flynn",
-    role: "Managing Partner · Aegion Mountain client",
   },
   {
     quote:
       "A trusted guide for structuring bold growth agendas - decisive, data-rich, and deeply collaborative.",
     author: "Priya Raman",
-    role: "Board Chair · Aegion Mountain client",
   },
 ];
 
@@ -57,7 +54,6 @@ export default function Testimonials() {
               </p>
               <div className="mt-6">
                 <p className="font-semibold text-brand-blue">{testimonial.author}</p>
-                <p className="text-sm text-brand-slate">{testimonial.role}</p>
               </div>
             </motion.div>
           ))}
