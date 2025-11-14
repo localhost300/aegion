@@ -271,6 +271,80 @@ export const services: Service[] = [
     ],
     ctaLabel: "Strengthen Risk Posture",
   },
+  {
+    slug: "participant-care-concierge",
+    title: "Participant Care Concierge",
+    category: "Experience",
+    summary:
+      "A hybrid service desk that keeps every participant confident, combining proactive education, live guidance, and data-backed escalations.",
+    heroImage: "/workplace-team-cooperation-businesswoman-laptop-office.jpg",
+    cardImage: "/team-session.jpg",
+    stats: [
+      { label: "Coverage", value: "24/5" },
+      { label: "Languages", value: "8" },
+      { label: "CSAT", value: "99%" },
+    ],
+    pillars: [
+      {
+        title: "Omni-channel Support",
+        description:
+          "Live chat, SMS, and scheduled video consults so every question is acknowledged within minutes.",
+      },
+      {
+        title: "Participant Intelligence",
+        description:
+          "Engagement scoring and alerting that surface households who may need nudges before milestones.",
+      },
+      {
+        title: "Escalation Playbooks",
+        description:
+          "Templates that route complex cases to compliance, plan sponsors, or advisors without friction.",
+      },
+    ],
+    highlights: [
+      "Event-based messaging for enrollments, rollovers, and retirement readiness.",
+      "Integrated knowledge base with screen-shares and guided walkthroughs.",
+      "Sentiment dashboards for HR and finance leadership.",
+    ],
+    ctaLabel: "Meet The Concierge Team",
+  },
+  {
+    slug: "plan-health-audit",
+    title: "Plan Health Audit",
+    category: "Advisory",
+    summary:
+      "A rapid diagnostic that benchmarks plan design, fees, and fiduciary governance so leaders can prioritize what to modernize next.",
+    heroImage: "/team-session.jpg",
+    cardImage: "/brown-retro-electronic-phone-device.jpg",
+    stats: [
+      { label: "Audit duration", value: "30 days" },
+      { label: "Benchmarks", value: "75+" },
+      { label: "Findings deck", value: "25 slides" },
+    ],
+    pillars: [
+      {
+        title: "Data Intake",
+        description:
+          "Automated ingestion of plan documents, vendor agreements, and participant demographics.",
+      },
+      {
+        title: "Comparative Analytics",
+        description:
+          "Fee, design, and outcome benchmarks stacked against peers, industries, and regulatory guidelines.",
+      },
+      {
+        title: "Action Roadmap",
+        description:
+          "Prioritized backlog with business cases, owner assignments, and timing guidance.",
+      },
+    ],
+    highlights: [
+      "Clear view of fiduciary risks and quick wins.",
+      "Consolidated summary for committees and boards.",
+      "Optional workshop to align HR, finance, and advisors.",
+    ],
+    ctaLabel: "Schedule An Audit",
+  },
 ];
 
 export const getService = (slug: string) =>

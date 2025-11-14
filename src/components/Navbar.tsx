@@ -18,9 +18,9 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 py-1 shadow-sm backdrop-blur-md">
-      <div className="flex w-full items-center justify-between px-3 py-1 md:px-6 md:py-2">
-        <Link href="/" className="relative flex h-28 w-96 items-center lg:h-32 lg:w-[28rem]">
+    <header className="sticky top-0 z-50 bg-white/90 py-0.5 shadow-sm backdrop-blur-md">
+      <div className="flex w-full items-center justify-between px-3 py-1 md:px-6 md:py-1.5">
+        <Link href="/" className="relative flex h-16 w-56 items-center lg:h-20 lg:w-80">
           <Image
             src="/aegion-logo.png"
             alt="Aegion Mountain"
@@ -30,7 +30,7 @@ export default function Navbar() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-5 text-base font-bold text-brand-slate lg:flex">
+        <nav className="hidden items-center gap-4 text-sm font-semibold text-brand-slate lg:flex">
           {navItems.map((item) =>
             item.href.startsWith("#") ? (
               <a key={item.label} href={item.href} className="transition hover:text-brand-blue">
@@ -48,7 +48,7 @@ export default function Navbar() {
           <Link
             href="https://admin.aegionmountain.com/register"
             target="_blank"
-            className="rounded-full bg-brand-blue px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white transition hover:bg-brand-navy"
+            className="rounded-full bg-brand-blue px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-white transition hover:bg-brand-navy"
             rel="noreferrer"
           >
             Sign Up
