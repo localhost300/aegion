@@ -1,27 +1,37 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 import SectionHeading from "@/components/SectionHeading";
-import { ArrowUpRight } from "lucide-react";
+
+const registrationUrl = "https://admin.aegionmountain.com/register";
 
 const steps = [
   {
-    title: "Discovery",
+    badge: "Step One",
+    title: "Sign up | Enter Details",
     description:
-      "Plan health assessments, fiduciary file reviews, and participant journey mapping.",
+      "The first requirement for this programme is to sign up, by entering all recommended information correctly.",
+    cta: {
+      label: "Take me there",
+      href: registrationUrl,
+    },
   },
   {
-    title: "Design",
+    badge: "Step Two",
+    title: "Fund Your Portfolio | Any Amount",
     description:
-      "Modeling of plan provisions, contribution policies, and benefit communications.",
+      "Once logged in, you can commence by funding your account using any of our secured deposit options that suit you.",
   },
   {
-    title: "Activation",
+    badge: "Step Three",
+    title: "Invest | Choose a Plan",
     description:
-      "Change orchestration, vendor coordination, and guided enrollment experiences.",
+      "We have lots of plans with various starting amounts. Based on your deposit, choose the plan that accommodates you and enroll immediately.",
   },
   {
-    title: "Assurance",
+    badge: "Step Four",
+    title: "Withdraw | Or Rollover",
     description:
-      "Ongoing monitoring, board-ready reporting, and regulator-aligned documentation.",
+      "You can choose to withdraw at the end of the investment tenure, or roll over your investment to accumulate more.",
   },
 ];
 
@@ -34,32 +44,51 @@ export default function Approach() {
     >
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
-          eyebrow="Our approach"
-          title="A precise rhythm from insight to assurance."
-          description="Every Aegion Mountain engagement moves through four disciplined phases - keeping sponsors aligned and participants informed."
+          eyebrow="How to get started"
+          title="Follow four simple steps to begin."
+          description="From registration to rollover, the process is clear and fast. Move through each milestone and you will be compounding in no time."
           theme="dark"
         />
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, index) => (
             <motion.div
-              key={step.title}
+              key={step.badge}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
-              className="relative rounded-3xl border border-white/20 bg-white/10 p-6"
+              className="rounded-3xl border border-white/20 bg-white/10 p-6"
             >
-              <div className="absolute inset-x-6 top-6 flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.35em] text-brand-gold">
-                <span>0{index + 1}</span>
-                {step.title}
-              </div>
-              <div className="pt-16">
+              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-brand-gold">
+                {step.badge}
+              </p>
+              <div className="mt-6 space-y-4">
+                <h3 className="text-xl font-semibold">{step.title}</h3>
                 <p className="text-base text-white/80">{step.description}</p>
               </div>
-              <ArrowUpRight className="mt-6 text-brand-gold" size={20} />
+              {step.cta && (
+                <Link
+                  href={step.cta.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-gold underline underline-offset-4"
+                >
+                  {step.cta.label}
+                </Link>
+              )}
             </motion.div>
           ))}
+        </div>
+        <div className="mt-12 flex justify-center">
+          <Link
+            href={registrationUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-full bg-white px-10 py-3 text-sm font-semibold uppercase tracking-wide text-brand-blue transition hover:bg-brand-gold hover:text-brand-navy"
+          >
+            Get Started
+          </Link>
         </div>
       </div>
     </section>

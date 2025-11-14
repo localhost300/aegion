@@ -6,12 +6,12 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { label: "Why Us", href: "#value" },
-  { label: "Approach", href: "#approach" },
-  { label: "Solutions", href: "#solutions" },
+  { label: "Why Us", href: "/#value" },
+  { label: "Approach", href: "/#approach" },
+  { label: "Solutions", href: "/#solutions" },
   { label: "Insights", href: "/insights" },
   { label: "Services", href: "/services" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -22,29 +22,23 @@ export default function Navbar() {
       <div className="flex w-full items-center justify-between px-3 py-1 md:px-6 md:py-1.5">
         <Link
           href="/"
-          className="relative flex h-16 w-64 items-center lg:h-20 lg:w-[22rem]"
+          className="relative flex h-16 w-72 items-center lg:h-20 lg:w-[26rem]"
         >
           <Image
             src="/aegion-logo.png"
             alt="Aegion Mountain"
             fill
-            className="object-contain scale-110"
+            className="object-contain scale-125 origin-left"
             priority
           />
         </Link>
 
         <nav className="hidden items-center gap-4 text-sm font-semibold text-brand-slate lg:flex">
-          {navItems.map((item) =>
-            item.href.startsWith("#") ? (
-              <a key={item.label} href={item.href} className="transition hover:text-brand-blue">
-                {item.label}
-              </a>
-            ) : (
-              <Link key={item.label} href={item.href} className="transition hover:text-brand-blue">
-                {item.label}
-              </Link>
-            )
-          )}
+          {navItems.map((item) => (
+            <Link key={item.label} href={item.href} className="transition hover:text-brand-blue">
+              {item.label}
+            </Link>
+          ))}
         </nav>
 
         <div className="hidden lg:block">
@@ -70,27 +64,16 @@ export default function Navbar() {
       {isOpen && (
         <div className="border-t border-brand-border bg-white px-6 py-4 lg:hidden">
           <div className="flex flex-col gap-4 text-base font-semibold text-brand-blue">
-            {navItems.map((item) =>
-              item.href.startsWith("#") ? (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="py-1"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </a>
-              ) : (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="py-1"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              )
-            )}
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="py-1"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
             <Link
               href="https://admin.aegionmountain.com/register"
               target="_blank"

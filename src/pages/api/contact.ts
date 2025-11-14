@@ -67,10 +67,11 @@ export default async function handler(
       }
     }
 
+    const port = Number(process.env.HOSTINGER_SMTP_PORT) || 587;
     const transporter = nodemailer.createTransport({
       host: process.env.HOSTINGER_SMTP_HOST || "smtp.hostinger.com",
-      port: Number(process.env.HOSTINGER_SMTP_PORT) || 587,
-      secure: false,
+      port,
+      secure: port === 465,
       auth: {
         user: process.env.HOSTINGER_EMAIL,
         pass: process.env.HOSTINGER_EMAIL_PASSWORD,
