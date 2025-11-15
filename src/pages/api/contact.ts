@@ -37,7 +37,7 @@ export default async function handler(
       from: "Aegion Mountain <onboarding@resend.dev>",
       to: process.env.CONTACT_RECEIVER_EMAIL,
       subject: `[Contact] ${subject}`,
-      reply_to: email,
+      replyTo: email,
       react: EmailTemplate({ name, email, subject, message }),
     });
 
