@@ -27,19 +27,34 @@ function ContactFormShell({
     const form = event.currentTarget;
     const formData = new FormData(form);
 
-    const payload = {
-      name: formData.get("name")?.toString().trim(),
-      email: formData.get("email")?.toString().trim(),
-      organization: formData.get("organization")?.toString().trim(),
-      topic: formData.get("topic")?.toString().trim(),
-      message: formData.get("message")?.toString().trim(),
-    };
+    const name = formData.get("name")?.toString().trim();
+    const email = formData.get("email")?.toString().trim();
+    const organization = formData.get("organization")?.toString().trim();
+    const focusArea = formData.get("topic")?.toString().trim();
+    const rawMessage = formData.get("message")?.toString().trim();
 
-    if (!payload.name || !payload.email || !payload.message) {
+    if (!name || !email || !rawMessage) {
       setErrorMessage("Please complete the required fields.");
       setStatus("error");
       return;
     }
+
+    const subject = focusArea || "Website Inquiry";
+    const composedMessage = [
+      organization ? `Organization: ${organization}` : null,
+      focusArea ? `Focus Area: ${focusArea}` : null,
+      "",
+      rawMessage,
+    ]
+      .filter(Boolean)
+      .join("\n");
+
+    const payload = {
+      name,
+      email,
+      subject,
+      message: composedMessage,
+    };
 
     let recaptchaToken: string | undefined;
     if (hasRecaptcha) {

@@ -1,18 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import nodemailer from "nodemailer";
-
-const requiredEnvVars = ["HOSTINGER_EMAIL", "HOSTINGER_EMAIL_PASSWORD"] as const;
+import { Resend } from "resend";
+import EmailTemplate from "@/components/EmailTemplate";
 
 type ContactResponse =
   | { success: true }
   | { success: false; error: string };
 
-function missingEnvVar(): string | null {
-  for (const key of requiredEnvVars) {
-    if (!process.env[key]) return key;
-  }
-  return null;
-}
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async function handler(
   req: NextApiRequest,
@@ -22,16 +16,16 @@ export default async function handler(
     return res.status(405).json({ success: false, error: "Method not allowed" });
   }
 
-  const envMissing = missingEnvVar();
-  if (envMissing) {
-    return res
-      .status(500)
-      .json({ success: false, error: `Missing environment variable: ${envMissing}` });
+  if (!process.env.RESEND_API_KEY || !process.env.CONTACT_RECEIVER_EMAIL) {
+    return res.status(500).json({
+      success: false,
+      error: "Missing RESEND_API_KEY or CONTACT_RECEIVER_EMAIL.",
+    });
   }
 
-  const { name, email, organization, topic, message, recaptchaToken } = req.body ?? {};
+  const { name, email, subject, message } = req.body ?? {};
 
-  if (!name || !email || !message) {
+  if (!name || !email || !subject || !message) {
     return res.status(400).json({
       success: false,
       error: "Missing required fields.",
@@ -39,66 +33,26 @@ export default async function handler(
   }
 
   try {
-    if (recaptchaToken) {
-      if (!process.env.RECAPTCHA_SECRET_KEY) {
-        console.warn("reCAPTCHA token received but RECAPTCHA_SECRET_KEY is not set. Skipping verification.");
-      } else {
-        const verification = await fetch("https://www.google.com/recaptcha/api/siteverify", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-          body: new URLSearchParams({
-            secret: process.env.RECAPTCHA_SECRET_KEY,
-            response: recaptchaToken,
-          }).toString(),
-        });
+    const { error } = await resend.emails.send({
+      from: "Aegion Mountain <onboarding@resend.dev>",
+      to: process.env.CONTACT_RECEIVER_EMAIL,
+      subject: `[Contact] ${subject}`,
+      reply_to: email,
+      react: EmailTemplate({ name, email, subject, message }),
+    });
 
-        const verificationResult = (await verification.json()) as { success: boolean };
-        if (!verificationResult.success) {
-          return res.status(400).json({
-            success: false,
-            error: "reCAPTCHA validation failed.",
-          });
-        }
-      }
+    if (error) {
+      throw new Error(error.message);
     }
-
-    const port = Number(process.env.HOSTINGER_SMTP_PORT) || 587;
-    const transporter = nodemailer.createTransport({
-      host: process.env.HOSTINGER_SMTP_HOST || "smtp.hostinger.com",
-      port,
-      secure: port === 465,
-      auth: {
-        user: process.env.HOSTINGER_EMAIL,
-        pass: process.env.HOSTINGER_EMAIL_PASSWORD,
-      },
-    });
-
-    await transporter.sendMail({
-      from: `"Aegion Mountain Site" <${process.env.HOSTINGER_EMAIL}>`,
-      to: process.env.CONTACT_RECIPIENT || process.env.HOSTINGER_EMAIL,
-      replyTo: `${name} <${email}>`,
-      subject: `New inquiry${topic ? `: ${topic}` : ""}`,
-      text: `
-Name: ${name}
-Email: ${email}
-Organization: ${organization || "N/A"}
-Focus Area: ${topic || "N/A"}
-
-Message:
-${message}
-      `.trim(),
-    });
 
     return res.status(200).json({ success: true });
   } catch (error) {
     console.error("Contact form error", error);
-    const message =
+    const errorMessage =
       error instanceof Error ? error.message : "Unable to send message. Please try again later.";
     return res.status(500).json({
       success: false,
-      error: message,
+      error: errorMessage,
     });
   }
 }
