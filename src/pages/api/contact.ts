@@ -34,7 +34,7 @@ export default async function handler(
 
   try {
     const { error } = await resend.emails.send({
-      from: "Aegion Mountain <onboarding@resend.dev>",
+      from: "Aegion Mountain <support@aegionmountain.com>",
       to: process.env.CONTACT_RECEIVER_EMAIL,
       subject: `[Contact] ${subject}`,
       replyTo: email,
