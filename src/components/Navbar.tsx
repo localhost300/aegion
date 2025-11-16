@@ -8,7 +8,6 @@ import { Menu, X } from "lucide-react";
 const navItems = [
   { label: "Why Us", href: "/#value" },
   { label: "Approach", href: "/#approach" },
-  { label: "Solutions", href: "/#solutions" },
   { label: "Insights", href: "/insights" },
   { label: "Services", href: "/services" },
   { label: "Contact", href: "/#contact" },
@@ -22,7 +21,7 @@ export default function Navbar() {
       <div className="flex w-full items-center justify-between px-3 py-1 md:px-6 md:py-1.5">
         <Link
           href="/"
-          className="relative flex h-16 w-72 items-center lg:h-20 lg:w-[26rem]"
+          className="relative flex h-20 w-80 items-center lg:h-24 lg:w-[30rem]"
         >
           <Image
             src="/aegion-logo.png"
@@ -45,10 +44,10 @@ export default function Navbar() {
           <Link
             href="https://admin.aegionmountain.com/register"
             target="_blank"
-            className="rounded-full bg-brand-blue px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-white transition hover:bg-brand-navy"
+            className="rounded-full bg-brand-blue px-6 py-2 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-brand-navy"
             rel="noreferrer"
           >
-            Sign Up
+            Sign Up / Log In
           </Link>
         </div>
 
@@ -78,10 +77,10 @@ export default function Navbar() {
               href="https://admin.aegionmountain.com/register"
               target="_blank"
               rel="noreferrer"
-              className="rounded-full bg-brand-gold px-4 py-2 text-center font-semibold text-brand-navy"
+              className="rounded-full bg-brand-gold px-6 py-2.5 text-center text-base font-semibold text-brand-navy"
               onClick={() => setIsOpen(false)}
             >
-              Sign Up
+              Sign Up / Log In
             </Link>
           </div>
         </div>
