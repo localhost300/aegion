@@ -15,10 +15,10 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Aegion Mountain | Retirement Strategy Partners</title>
+        <title>Aegion Mountain | Modern Strategy Partners</title>
         <meta
           name="description"
-          content="Aegion Mountain guides organizations through IRA stewardship, 401(k) modernization, strategic insight, and plan assurance."
+          content="Aegion Mountain delivers tailored guidance, digital tools, and thoughtful strategy to help organizations move forward with confidence."
         />
         <link rel="icon" href="/favi.png" type="image/png" />
       </Head>

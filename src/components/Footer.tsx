@@ -61,7 +61,7 @@ export default function Footer() {
       </div>
       <div className="mx-auto mt-8 max-w-6xl space-y-4 px-6 text-xs text-brand-slate">
         <p>
-          Review Aegion Mountain Cap a subsidiary of Vela Partners with FINRA&apos;s BrokerCheck{" "}
+          Review Aegion Mountain Cap a subsidiary of Mountain Cap Partners with FINRA&apos;s BrokerCheck{" "}
           <Link
             href="https://adviserinfo.sec.gov/firm/summary/281465"
             target="_blank"
