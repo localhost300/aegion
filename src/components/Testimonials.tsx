@@ -5,28 +5,25 @@ import { Quote } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "Aegion Mountain transformed how our board understands retirement readiness. Their detail and empathy show up in every interaction.",
-    author: "Elena Park",
+      "Aegion Mountain tuned our automation to the West Coast liquidity windows and documented every guardrail for our auditors.",
+    author: "Dana Chen, Chief Investment Officer",
+    region: "San Francisco, CA",
   },
   {
     quote:
-      "They deliver clarity in the room, alignment after the meeting, and measurable lift in plan outcomes within weeks.",
-    author: "Marcus Flynn",
+      "Their team blends governance rigor with fast execution. EMEA desks finally have a playbook that keeps compliance comfortable.",
+    author: "Marcus Flynn, VP Global Markets",
+    region: "London, UK",
   },
   {
     quote:
-      "A trusted guide for structuring bold growth agendas - decisive, data-rich, and deeply collaborative.",
-    author: "Priya Raman",
+      "Aegion strategists stay on-call, recalibrating signals for Toronto and NYC hours so our coverage never sleeps.",
+    author: "Priya Raman, Portfolio Lead",
+    region: "Toronto, ON",
   },
 ];
 
-const partners = [
-  "Sterling Ridge",
-  "Northwind Group",
-  "Helios Partners",
-  "Lattice Industries",
-  "Axiom Bridge",
-];
+const partners = ["Sierra Crest (US West)", "Northwind Group (UK)", "Helios Partners (Gulf)", "Lattice Industries (Canada)", "Axiom Bridge (Midwest)"];
 
 export default function Testimonials() {
   return (
@@ -34,8 +31,8 @@ export default function Testimonials() {
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
           eyebrow="Trust"
-          title="Relationships anchored in delivery."
-          description="We champion discretion and reliability - earning mandates from Fortune 200 boards, growth-stage disruptors, and mission-driven institutions."
+          title="Aegion relationships across North America and EMEA."
+          description="Automation, advisory, and oversight tailored to regional hours, liquidity profiles, and governance standards."
         />
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -46,7 +43,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.45 }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
-              className="flex h-full flex-col justify-between rounded-3xl border border-brand-border bg-white/90 p-8"
+              className="flex h-full flex-col justify-between rounded-3xl border border-brand-border bg-white p-8 shadow-card"
             >
               <Quote className="text-brand-gold" />
               <p className="mt-6 text-lg text-brand-blue">
@@ -54,6 +51,7 @@ export default function Testimonials() {
               </p>
               <div className="mt-6">
                 <p className="font-semibold text-brand-blue">{testimonial.author}</p>
+                <p className="text-sm text-brand-slate">{testimonial.region}</p>
               </div>
             </motion.div>
           ))}

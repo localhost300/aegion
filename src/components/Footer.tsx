@@ -3,15 +3,17 @@ import Link from "next/link";
 import { Linkedin, Twitter } from "lucide-react";
 
 const links = [
-  { label: "About", href: "#hero" },
-  { label: "Services", href: "/services" },
-  { label: "Insights", href: "/insights" },
-  { label: "Contact", href: "#contact" },
+  { label: "ABOUT US", href: "/#about" },
+  { label: "SERVICES", href: "/services" },
+  { label: "Auto Trading Bot", href: "/auto-trading-bot" },
+  { label: "FAQ", href: "/faq" },
+  { label: "BLOG", href: "/blog" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-white py-10">
+    <footer className="bg-brand-blue py-10 text-white">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 md:flex-row md:items-center md:justify-between">
         <Link
           href="/"
@@ -26,7 +28,7 @@ export default function Footer() {
           />
         </Link>
 
-        <div className="flex flex-wrap gap-6 text-sm font-semibold text-brand-blue">
+        <div className="flex flex-wrap gap-6 text-sm font-semibold text-white">
           {links.map((link) =>
             link.href.startsWith("#") ? (
               <a key={link.label} href={link.href}>
@@ -40,12 +42,12 @@ export default function Footer() {
           )}
         </div>
 
-        <div className="flex gap-4 text-brand-blue">
+        <div className="flex gap-4 text-white">
           <Link
             href="https://www.linkedin.com"
             aria-label="LinkedIn"
             target="_blank"
-            className="rounded-full border border-brand-border p-2 transition hover:border-brand-blue hover:text-brand-blue"
+            className="rounded-full border border-white/30 p-2 transition hover:border-white hover:text-brand-gold"
           >
             <Linkedin size={18} />
           </Link>
@@ -53,19 +55,19 @@ export default function Footer() {
             href="https://www.twitter.com"
             aria-label="Twitter"
             target="_blank"
-            className="rounded-full border border-brand-border p-2 transition hover:border-brand-blue hover:text-brand-blue"
+            className="rounded-full border border-white/30 p-2 transition hover:border-white hover:text-brand-gold"
           >
             <Twitter size={18} />
           </Link>
         </div>
       </div>
-      <div className="mx-auto mt-8 max-w-6xl space-y-4 px-6 text-xs text-brand-slate">
+      <div className="mx-auto mt-8 max-w-6xl space-y-4 px-6 text-xs text-white/70">
         <p>
           Review Aegion Mountain Cap a subsidiary of Mountain Cap Partners with FINRA&apos;s BrokerCheck{" "}
           <Link
             href="https://adviserinfo.sec.gov/firm/summary/281465"
             target="_blank"
-            className="text-brand-blue underline underline-offset-2 hover:text-brand-blue"
+            className="text-white underline underline-offset-2 hover:text-brand-gold"
           >
             here
           </Link>
@@ -93,7 +95,7 @@ export default function Footer() {
           investment product offered by Aegion Mountain Cap Advisers LLC.
         </p>
       </div>
-      <p className="mt-6 text-center text-xs text-brand-slate">
+      <p className="mt-6 text-center text-xs text-white/70">
         Copyright {new Date().getFullYear()} Aegion Mountain. All rights reserved.
       </p>
     </footer>

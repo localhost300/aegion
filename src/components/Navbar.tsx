@@ -6,10 +6,11 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { label: "About", href: "/#about" },
-  { label: "Services", href: "/services" },
-  { label: "Insights", href: "/insights" },
-  { label: "Contact", href: "/#contact" },
+  { label: "ABOUT US", href: "/#about" },
+  { label: "SERVICES", href: "/services" },
+  { label: "Auto Trading Bot", href: "/auto-trading-bot" },
+  { label: "FAQ", href: "/faq" },
+  { label: "BLOG", href: "/blog" },
 ];
 
 export default function Navbar() {
@@ -17,21 +18,21 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-white/90 py-0.5 shadow-sm backdrop-blur-md">
-      <div className="flex w-full items-center justify-between px-3 py-1 md:px-6 md:py-1.5">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-2 md:px-6">
         <Link
           href="/"
-          className="relative flex h-20 w-80 items-center lg:h-24 lg:w-[30rem]"
+          className="relative flex h-16 w-56 items-center lg:h-20 lg:w-72"
         >
           <Image
             src="/aegion-logo.png"
             alt="Aegion Mountain"
             fill
-            className="object-contain scale-125 origin-left"
+            className="origin-left object-contain"
             priority
           />
         </Link>
 
-        <nav className="hidden items-center gap-4 text-sm font-semibold text-brand-slate lg:flex">
+        <nav className="hidden flex-1 items-center justify-center gap-8 text-sm font-semibold text-brand-blue lg:flex">
           {navItems.map((item) => (
             <Link key={item.label} href={item.href} className="transition hover:text-brand-blue">
               {item.label}
@@ -39,7 +40,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden lg:flex flex-1 justify-end">
           <Link
             href="https://admin.aegionmountain.com/register"
             target="_blank"
